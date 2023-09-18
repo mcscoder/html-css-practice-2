@@ -1,0 +1,42 @@
+.btn {
+  font-family: var(--work-sans-ff);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.25;
+  border: none;
+  background-color: transparent;
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
+}
+
+.circle-btn {
+  border-radius: 99px;
+  padding: 0.5rem;
+
+  .circle-btn-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.rectangle-btn {
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+}
+
+.search-btn {
+  border: var(--yt-border);
+  border-radius: 0px 2px 2px 0px;
+  background-color: var(--yt-gray-3);
+  width: 60px;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+.black-10-btn-hov {
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}

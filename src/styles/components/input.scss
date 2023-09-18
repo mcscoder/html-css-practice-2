@@ -1,0 +1,22 @@
+.inp {
+  outline: none;
+  color: var(--yt-gray);
+  font-family: var(--roboto-ff);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+
+  background-color: #fff;
+  border: var(--yt-border);
+  padding: 0 0.75rem;
+}
+
+.search-inp {
+  border-radius: 2px 0px 0px 2px;
+  box-shadow: 0px 1px 1px 0px #eee inset;
+
+  &:focus {
+    border-color: rgb(28, 98, 185);
+  }
+}
