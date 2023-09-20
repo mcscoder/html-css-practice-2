@@ -13,17 +13,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouTube</title>
   </head>
+  <input
+    type="checkbox"
+    name=""
+    class="toggle-input"
+    id="toggle-input"
+    hidden
+  />
   <body class="global-container">
     <header class="main-header">
       <section class="header-content-container">
         <div class="left-header">
-          <input
-            type="checkbox"
-            name=""
-            class="toggle-input"
-            id="toggle-input"
-            hidden
-          />
           <label class="btn circle-btn black-10-btn-hov" for="toggle-input">
             <div class="circle-btn-icon icon-container">
               <svg
@@ -236,7 +236,7 @@
             </div>
             <span class="link-text">Library</span>
           </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
+          <a href="#" class="nav-link-item btn rectangle-btn hide-on-mini">
             <div class="link-icon icon-container icon-24">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -252,7 +252,7 @@
             </div>
             <span class="link-text">History</span>
           </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
+          <a href="#" class="nav-link-item btn rectangle-btn hide-on-mini">
             <div class="link-icon icon-container icon-24">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -269,7 +269,7 @@
             </div>
             <span class="link-text">Your videos</span>
           </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
+          <a href="#" class="nav-link-item btn rectangle-btn hide-on-mini">
             <div class="link-icon icon-container icon-24">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -283,9 +283,9 @@
                 />
               </svg>
             </div>
-            <span class="link-text">Your videos</span>
+            <span class="link-text">Watch later</span>
           </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
+          <a href="#" class="nav-link-item btn rectangle-btn hide-on-mini">
             <div class="link-icon icon-container icon-24">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -299,10 +299,10 @@
                 />
               </svg>
             </div>
-            <span class="link-text">Your videos</span>
+            <span class="link-text">Liked videos</span>
           </a>
         </section>
-        <section class="links-item-container">
+        <section class="links-item-container hide-on-mini">
           <h3 class="section-title">Subscriptions</h3>
           <a href="#" class="nav-link-item btn rectangle-btn">
             <div class="link-icon icon-container icon-24">
@@ -361,7 +361,7 @@
             <span class="link-text">Browse channels</span>
           </a>
         </section>
-        <section class="links-item-container">
+        <section class="links-item-container hide-on-mini">
           <h3 class="section-title">more from youtube</h3>
           <a href="#" class="nav-link-item btn rectangle-btn">
             <div class="link-icon icon-container icon-24">
@@ -417,7 +417,7 @@
             <span class="link-text">Live</span>
           </a>
         </section>
-        <section class="links-item-container">
+        <section class="links-item-container hide-on-mini">
           <a href="#" class="nav-link-item btn rectangle-btn">
             <div class="link-icon icon-container icon-24">
               <svg
@@ -482,7 +482,7 @@
           </a>
         </section>
       </nav>
-      <footer class="side-bar-footer">
+      <footer class="side-bar-footer hide-on-mini">
         <p class="copyright">© 2020 Google LLC</p>
       </footer>
     </div>

@@ -1,3 +1,11 @@
+@mixin mini-bar {
+  .toggle-input {
+    &:checked {
+      @content;
+    }
+  }
+}
+
 .main-sidebar {
   position: fixed;
   top: var(--header-height);
@@ -6,6 +14,22 @@
   width: var(--side-bar-width);
   overflow-y: auto;
 
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background: #cfcfcf;
+    border-radius: 10px;
+  }
   .side-bar-nav {
     padding: 0 0.75rem;
 
@@ -26,7 +50,8 @@
       .nav-link-item {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
+        gap: 6px 1.5rem;
+        transition-property: background;
 
         .link-icon {
           color: var(--yt-gray);
