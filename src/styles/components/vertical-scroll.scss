@@ -1,0 +1,24 @@
+// total width - left and right border width
+// formula: width - border_width * 2
+$vertical-scroll-bg-clr: inset calc(16px - 4px * 2) 0 #909090;
+
+.yt-vertical-scroll {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 4px solid transparent;
+  }
+
+  &.sidebar-vertical-scroll:hover::-webkit-scrollbar-thumb {
+    box-shadow: $vertical-scroll-bg-clr;
+  }
+
+  &.main-content-vertical-scroll::-webkit-scrollbar-thumb {
+    box-shadow: $vertical-scroll-bg-clr;
+  }
+}

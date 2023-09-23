@@ -1,35 +1,10 @@
-@mixin mini-bar {
-  .toggle-input {
-    &:checked {
-      @content;
-    }
-  }
-}
-
 .main-sidebar {
   position: fixed;
   top: var(--header-height);
   left: 0;
   bottom: 0;
   width: var(--side-bar-width);
-  overflow-y: auto;
 
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: transparent;
-  }
-
-  &:hover::-webkit-scrollbar-thumb {
-    background: #cfcfcf;
-    border-radius: 10px;
-  }
   .side-bar-nav {
     padding: 0 0.75rem;
 
