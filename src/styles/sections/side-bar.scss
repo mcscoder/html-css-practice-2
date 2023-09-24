@@ -4,6 +4,8 @@
   left: 0;
   bottom: 0;
   width: var(--side-bar-width);
+  background-color: #fff;
+  z-index: 2;
 
   .side-bar-nav {
     padding: 0 0.75rem;

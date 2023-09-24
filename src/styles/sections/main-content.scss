@@ -10,6 +10,18 @@
   grid-auto-rows: auto;
   gap: 3rem 1rem;
 
+  @include pc-large() {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include pc-medium() {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include pc-small() {
+    margin-left: var(--mini-side-bar-width);
+  }
+
   .video-cell {
     display: flex;
     flex-direction: column;
