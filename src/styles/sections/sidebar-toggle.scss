@@ -1,34 +1,56 @@
-.toggle-input {
-  &:checked {
-    & ~ .main-sidebar {
-      width: var(--mini-side-bar-width);
-      // width: auto;
+@mixin toggle-sidebar {
+  & ~ .main-sidebar {
+    width: var(--mini-side-bar-width);
+    // width: auto;
 
-      .hide-on-mini {
-        display: none;
-      }
+    .hide-on-mini {
+      display: none;
+    }
 
-      .side-bar-nav {
-        padding: 0.75rem 4px;
+    .side-bar-nav {
+      padding: 0.75rem 4px;
 
-        .links-item-container {
-          padding: 0;
-          border: none;
+      .links-item-container {
+        padding: 0;
+        border: none;
 
-          .nav-link-item {
-            flex-direction: column;
-            padding: 14px 0;
+        .nav-link-item {
+          flex-direction: column;
+          padding: 14px 0;
 
-            .link-text {
-              font-size: 10px;
-            }
+          .link-text {
+            font-size: 10px;
           }
         }
       }
+    }
 
-      .side-bar-footer {
-        display: none;
+    .side-bar-footer {
+      display: none;
+    }
+  }
+
+  & ~ .main-content {
+    margin-left: var(--mini-side-bar-width);
+  }
+}
+
+.toggle-input {
+  &:checked {
+    @media screen and (min-width: ($pc-small + 1)) {
+      @include toggle-sidebar();
+    }
+
+    @include pc-small() {
+      & ~ .toggle-overlay {
+        display: block;
       }
+    }
+  }
+
+  &:not(:checked) {
+    @include pc-small() {
+      @include toggle-sidebar();
     }
   }
 }

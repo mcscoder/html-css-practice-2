@@ -1,13 +1,14 @@
 // Base
-@import url(fonts.scss);
-@import url(reset.scss);
-@import url(variables.scss);
+@import "fonts.scss";
+@import "reset.scss";
+@import "variables.scss";
+@import "break-points.scss";
 
 // Components
-@import url(components/index.scss);
+@import "components/index.scss";
 
 // Sections
-@import url(sections/index.scss);
+@import "sections/index.scss";
 
 // Common
-@import url(common/index.scss);
+@import "common/index.scss";
