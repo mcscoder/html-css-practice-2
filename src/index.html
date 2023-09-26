@@ -12,17 +12,18 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouTube</title>
+    <link rel="stylesheet" href="./styles/main.scss" />
   </head>
-  <input
-    type="checkbox"
-    name=""
-    class="toggle-input"
-    id="toggle-input"
-    hidden
-  />
   <body
     class="global-container yt-vertical-scroll main-content-vertical-scroll"
   >
+    <input
+      type="checkbox"
+      name=""
+      class="toggle-input"
+      id="toggle-input"
+      hidden
+    />
     <label for="toggle-input" class="toggle-overlay"></label>
     <header class="main-header">
       <section class="header-content-container">
@@ -46,7 +47,7 @@
               </svg>
             </div>
           </label>
-          <a href="#" class="yt-home-link rectangle-btn">
+          <a href="#" class="yt-home-link rectangle-btn" aria-label="youtube">
             <div class="icon-container">
               <svg
                 width="90"
@@ -96,8 +97,12 @@
         </div>
         <div class="search-bar-container">
           <form action="#" class="search-form">
-            <input type="text" placeholder="Search" class="search-inp inp" />
-            <button class="search-btn btn icon-container">
+            <input
+              type="text"
+              placeholder="Search"
+              class="search-inp input-text"
+            />
+            <button class="search-btn btn icon-container" aria-label="search">
               <svg
                 width="20"
                 height="20"
@@ -114,7 +119,11 @@
           </form>
         </div>
         <div class="right-header">
-          <a href="#" class="yt-create-link btn circle-btn black-10-btn-hov">
+          <a
+            href="#"
+            class="yt-create-link btn circle-btn black-10-btn-hov"
+            aria-label="Upload"
+          >
             <div class="circle-btn-icon icon-container">
               <svg
                 width="18"
@@ -130,7 +139,11 @@
               </svg>
             </div>
           </a>
-          <a href="#" class="yt-group-link btn circle-btn black-10-btn-hov">
+          <a
+            href="#"
+            class="yt-group-link btn circle-btn black-10-btn-hov"
+            aria-label="Other"
+          >
             <div class="circle-btn-icon icon-container">
               <svg
                 width="16"
@@ -146,7 +159,10 @@
               </svg>
             </div>
           </a>
-          <button class="yt-notification-btn btn circle-btn black-10-btn-hov">
+          <button
+            class="yt-notification-btn btn circle-btn black-10-btn-hov"
+            aria-label="notification"
+          >
             <div class="circle-btn-icon icon-container">
               <svg
                 width="16"
@@ -162,7 +178,7 @@
               </svg>
             </div>
           </button>
-          <button class="profile-btn btn">
+          <button class="profile-btn btn" aria-label="profile">
             <img
               class="profile-img"
               src="./assets/images/navigation-bar/profile-img.jpg"
@@ -174,316 +190,318 @@
     </header>
     <div class="main-sidebar yt-vertical-scroll sidebar-vertical-scroll">
       <nav class="side-bar-nav">
-        <section class="links-item-container">
-          <a href="#" class="nav-link-item btn rectangle-btn active">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="17"
-                viewBox="0 0 20 17"
-                fill="currentColor"
-              >
-                <path d="M8 17V11H12V17H17V9H20L10 0L0 9H3V17" />
-              </svg>
-            </div>
-            <span class="link-text">Home</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="18"
-                viewBox="0 0 14 18"
-                fill="currentColor"
-              >
-                <path
-                  d="M12.5301 8.2C12.3001 7.9 12.0301 7.64 11.7701 7.38C11.1201 6.78 10.3701 6.35 9.74009 5.72C8.28009 4.26 7.96009 1.85 8.89009 0C7.99009 0.23 7.14009 0.75 6.44009 1.32C3.90009 3.4 2.90009 7.07 4.10009 10.22C4.14009 10.32 4.18009 10.42 4.18009 10.55C4.18009 10.77 4.03009 10.97 3.83009 11.05C3.61009 11.15 3.37009 11.09 3.19009 10.93C3.13009 10.88 3.09009 10.83 3.04009 10.76C1.94009 9.33 1.76009 7.28 2.51009 5.64C0.87009 7 8.94219e-05 9.3 0.120089 11.47C0.160089 11.97 0.220089 12.47 0.390089 12.97C0.530089 13.57 0.79009 14.17 1.11009 14.7C2.15009 16.43 3.98009 17.67 5.95009 17.92C8.05009 18.19 10.3001 17.8 11.9101 16.32C13.7101 14.66 14.3601 12.02 13.4101 9.72L13.2801 9.46C13.0801 9.01 12.8101 8.59 12.5001 8.21L12.5301 8.2ZM9.43009 14.5C9.15009 14.74 8.70009 15 8.35009 15.1C7.25009 15.48 6.15009 14.94 5.47009 14.28C6.67009 14 7.37009 13.12 7.57009 12.23C7.74009 11.43 7.43009 10.77 7.30009 10C7.18009 9.26 7.20009 8.63 7.50009 7.94C7.65009 8.32 7.85009 8.7 8.08009 9C8.84009 10 10.0301 10.44 10.2801 11.8C10.3201 11.94 10.3401 12.08 10.3401 12.23C10.3701 13.05 10.0201 13.95 9.42009 14.49L9.43009 14.5Z"
+        <ul>
+          <li class="links-item-container">
+            <a href="#" class="nav-link-item btn rectangle-btn active">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="17"
+                  viewBox="0 0 20 17"
+                  fill="currentColor"
+                >
+                  <path d="M8 17V11H12V17H17V9H20L10 0L0 9H3V17" />
+                </svg>
+              </div>
+              <span class="link-text">Home</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="18"
+                  viewBox="0 0 14 18"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12.5301 8.2C12.3001 7.9 12.0301 7.64 11.7701 7.38C11.1201 6.78 10.3701 6.35 9.74009 5.72C8.28009 4.26 7.96009 1.85 8.89009 0C7.99009 0.23 7.14009 0.75 6.44009 1.32C3.90009 3.4 2.90009 7.07 4.10009 10.22C4.14009 10.32 4.18009 10.42 4.18009 10.55C4.18009 10.77 4.03009 10.97 3.83009 11.05C3.61009 11.15 3.37009 11.09 3.19009 10.93C3.13009 10.88 3.09009 10.83 3.04009 10.76C1.94009 9.33 1.76009 7.28 2.51009 5.64C0.87009 7 8.94219e-05 9.3 0.120089 11.47C0.160089 11.97 0.220089 12.47 0.390089 12.97C0.530089 13.57 0.79009 14.17 1.11009 14.7C2.15009 16.43 3.98009 17.67 5.95009 17.92C8.05009 18.19 10.3001 17.8 11.9101 16.32C13.7101 14.66 14.3601 12.02 13.4101 9.72L13.2801 9.46C13.0801 9.01 12.8101 8.59 12.5001 8.21L12.5301 8.2ZM9.43009 14.5C9.15009 14.74 8.70009 15 8.35009 15.1C7.25009 15.48 6.15009 14.94 5.47009 14.28C6.67009 14 7.37009 13.12 7.57009 12.23C7.74009 11.43 7.43009 10.77 7.30009 10C7.18009 9.26 7.20009 8.63 7.50009 7.94C7.65009 8.32 7.85009 8.7 8.08009 9C8.84009 10 10.0301 10.44 10.2801 11.8C10.3201 11.94 10.3401 12.08 10.3401 12.23C10.3701 13.05 10.0201 13.95 9.42009 14.49L9.43009 14.5Z"
+                  />
+                </svg>
+              </div>
+              <span class="link-text">Trending</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M15.7 5.70001H2.29995V4.00001H15.7V5.70001ZM14 0.700012H3.99995V2.30001H14V0.700012ZM17.2999 9.00001V15.7C17.2999 16.7 16.6 17.3 15.7 17.3H2.29995C1.29995 17.3 0.699951 16.6 0.699951 15.7V9.00001C0.699951 8.00001 1.39995 7.30001 2.29995 7.30001H15.7C16.7 7.30001 17.2999 8.10001 17.2999 9.00001ZM12.3 12.3L7.29995 9.60001V15L12.3 12.3Z"
+                  />
+                </svg>
+              </div>
+              <span class="link-text">Subscriptions</span>
+            </a>
+          </li>
+          <li class="links-item-container">
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M4 6H2V20C2 21.1 2.9 22 4 22H18V20H4V6ZM20 2H8C6.9 2 6 2.9 6 4V16C6 17.1 6.9 18 8 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM12 14.5V5.5L18 10L12 14.5Z"
+                  />
+                </svg>
+              </div>
+              <span class="link-text">Library</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn hide-on-mini">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="17"
+                  viewBox="0 0 20 17"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M11.396 0C6.67358 0 2.85418 3.81212 2.85418 8.5H0L3.70524 12.1782L3.74676 12.3121L7.58692 8.5H4.7535C4.7535 4.85273 7.73223 1.88545 11.4167 1.88545C15.0908 1.88545 18.0592 4.85273 18.0592 8.5C18.0592 12.1473 15.0908 15.1145 11.4167 15.1145C9.56928 15.1145 7.90867 14.3624 6.70472 13.157L5.35547 14.4964C6.9123 16.0418 9.03996 17 11.4063 17C16.1598 17 20 13.1879 20 8.5C20 3.80182 16.1598 0 11.4271 0H11.396ZM10.4619 4.71879V9.45818L14.5304 11.8279L15.2154 10.6945L11.8941 8.73697V4.71879H10.4619Z"
+                  />
+                </svg>
+              </div>
+              <span class="link-text">History</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn hide-on-mini">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M15.3999 2.60002V15.4H2.5999V2.60002H15.3999ZM15.3999 0.800021H2.5999C2.12251 0.800021 1.66467 0.989663 1.32711 1.32723C0.989541 1.66479 0.799899 2.12263 0.799899 2.60002V15.4C0.786286 15.6447 0.822769 15.8895 0.907112 16.1196C0.991455 16.3497 1.12188 16.5601 1.2904 16.738C1.45893 16.9158 1.66199 17.0574 1.88716 17.1541C2.11233 17.2507 2.35486 17.3004 2.5999 17.3H15.3999C15.6532 17.3145 15.9067 17.2753 16.1438 17.185C16.3809 17.0946 16.5962 16.9552 16.7756 16.7758C16.955 16.5963 17.0945 16.381 17.1849 16.1439C17.2752 15.9068 17.3144 15.6533 17.2999 15.4V2.60002C17.3003 2.35499 17.2506 2.11245 17.154 1.88728C17.0573 1.66211 16.9157 1.45905 16.7378 1.29053C16.56 1.122 16.3495 0.991577 16.1195 0.907234C15.8894 0.822891 15.6446 0.786408 15.3999 0.800021Z"
+                  />
+                  <path d="M7.19995 6V12.5L12.2 9.3L7.19995 6.1V6Z" />
+                </svg>
+              </div>
+              <span class="link-text">Your videos</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn hide-on-mini">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M8.99992 0.670013C4.41992 0.670013 0.669922 4.42001 0.669922 9.00001C0.669922 13.58 4.41992 17.33 8.99992 17.33C13.5799 17.33 17.3299 13.58 17.3299 9.00001C17.3299 4.42001 13.5799 0.670013 8.99992 0.670013ZM12.4999 12.5L8.16992 9.83001V4.83001H9.41992V9.17001L13.1699 11.42L12.4999 12.5Z"
+                  />
+                </svg>
+              </div>
+              <span class="link-text">Watch later</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn hide-on-mini">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="16"
+                  viewBox="0 0 18 16"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M0.75 15.75H3.75V6.75H0.75V15.75ZM17.25 7.5C17.25 6.67 16.57 6 15.75 6H11.02L11.72 2.57L11.75 2.33C11.75 2.03 11.62 1.73 11.42 1.53L10.62 0.75L5.7 5.7C5.4 5.96 5.25 6.34 5.25 6.75V14.25C5.25 15.07 5.92 15.75 6.75 15.75H13.5C14.12 15.75 14.65 15.37 14.88 14.85L17.15 9.55C17.21 9.37 17.25 9.19 17.25 9V7.5Z"
+                  />
+                </svg>
+              </div>
+              <span class="link-text">Liked videos</span>
+            </a>
+          </li>
+          <li class="links-item-container hide-on-mini">
+            <h3 class="section-title">subscriptions</h3>
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <img
+                  class="profile-img"
+                  src="./assets/images/side-bar/profile-1.jpg"
+                  alt="user profile image"
                 />
-              </svg>
-            </div>
-            <span class="link-text">Trending</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 18 18"
-                fill="currentColor"
-              >
-                <path
-                  d="M15.7 5.70001H2.29995V4.00001H15.7V5.70001ZM14 0.700012H3.99995V2.30001H14V0.700012ZM17.2999 9.00001V15.7C17.2999 16.7 16.6 17.3 15.7 17.3H2.29995C1.29995 17.3 0.699951 16.6 0.699951 15.7V9.00001C0.699951 8.00001 1.39995 7.30001 2.29995 7.30001H15.7C16.7 7.30001 17.2999 8.10001 17.2999 9.00001ZM12.3 12.3L7.29995 9.60001V15L12.3 12.3Z"
+              </div>
+              <span class="link-text">Ohfuh Cringe 69</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <img
+                  class="profile-img"
+                  src="./assets/images/side-bar/profile-2.jpg"
+                  alt="user profile image"
                 />
-              </svg>
-            </div>
-            <span class="link-text">Subscriptions</span>
-          </a>
-        </section>
-        <section class="links-item-container">
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M4 6H2V20C2 21.1 2.9 22 4 22H18V20H4V6ZM20 2H8C6.9 2 6 2.9 6 4V16C6 17.1 6.9 18 8 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM12 14.5V5.5L18 10L12 14.5Z"
+              </div>
+              <span class="link-text">Ohfuh Cringe 69</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <img
+                  class="profile-img"
+                  src="./assets/images/side-bar/profile-3.jpg"
+                  alt="user profile image"
                 />
-              </svg>
-            </div>
-            <span class="link-text">Library</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn hide-on-mini">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="17"
-                viewBox="0 0 20 17"
-                fill="currentColor"
-              >
-                <path
-                  d="M11.396 0C6.67358 0 2.85418 3.81212 2.85418 8.5H0L3.70524 12.1782L3.74676 12.3121L7.58692 8.5H4.7535C4.7535 4.85273 7.73223 1.88545 11.4167 1.88545C15.0908 1.88545 18.0592 4.85273 18.0592 8.5C18.0592 12.1473 15.0908 15.1145 11.4167 15.1145C9.56928 15.1145 7.90867 14.3624 6.70472 13.157L5.35547 14.4964C6.9123 16.0418 9.03996 17 11.4063 17C16.1598 17 20 13.1879 20 8.5C20 3.80182 16.1598 0 11.4271 0H11.396ZM10.4619 4.71879V9.45818L14.5304 11.8279L15.2154 10.6945L11.8941 8.73697V4.71879H10.4619Z"
+              </div>
+              <span class="link-text">Ohfuh Cringe 69</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <img
+                  class="profile-img"
+                  src="./assets/images/side-bar/profile-4.jpg"
+                  alt="user profile image"
                 />
-              </svg>
-            </div>
-            <span class="link-text">History</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn hide-on-mini">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 18 18"
-                fill="currentColor"
-              >
-                <path
-                  d="M15.3999 2.60002V15.4H2.5999V2.60002H15.3999ZM15.3999 0.800021H2.5999C2.12251 0.800021 1.66467 0.989663 1.32711 1.32723C0.989541 1.66479 0.799899 2.12263 0.799899 2.60002V15.4C0.786286 15.6447 0.822769 15.8895 0.907112 16.1196C0.991455 16.3497 1.12188 16.5601 1.2904 16.738C1.45893 16.9158 1.66199 17.0574 1.88716 17.1541C2.11233 17.2507 2.35486 17.3004 2.5999 17.3H15.3999C15.6532 17.3145 15.9067 17.2753 16.1438 17.185C16.3809 17.0946 16.5962 16.9552 16.7756 16.7758C16.955 16.5963 17.0945 16.381 17.1849 16.1439C17.2752 15.9068 17.3144 15.6533 17.2999 15.4V2.60002C17.3003 2.35499 17.2506 2.11245 17.154 1.88728C17.0573 1.66211 16.9157 1.45905 16.7378 1.29053C16.56 1.122 16.3495 0.991577 16.1195 0.907234C15.8894 0.822891 15.6446 0.786408 15.3999 0.800021Z"
-                />
-                <path d="M7.19995 6V12.5L12.2 9.3L7.19995 6.1V6Z" />
-              </svg>
-            </div>
-            <span class="link-text">Your videos</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn hide-on-mini">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 18 18"
-                fill="currentColor"
-              >
-                <path
-                  d="M8.99992 0.670013C4.41992 0.670013 0.669922 4.42001 0.669922 9.00001C0.669922 13.58 4.41992 17.33 8.99992 17.33C13.5799 17.33 17.3299 13.58 17.3299 9.00001C17.3299 4.42001 13.5799 0.670013 8.99992 0.670013ZM12.4999 12.5L8.16992 9.83001V4.83001H9.41992V9.17001L13.1699 11.42L12.4999 12.5Z"
-                />
-              </svg>
-            </div>
-            <span class="link-text">Watch later</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn hide-on-mini">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="16"
-                viewBox="0 0 18 16"
-                fill="currentColor"
-              >
-                <path
-                  d="M0.75 15.75H3.75V6.75H0.75V15.75ZM17.25 7.5C17.25 6.67 16.57 6 15.75 6H11.02L11.72 2.57L11.75 2.33C11.75 2.03 11.62 1.73 11.42 1.53L10.62 0.75L5.7 5.7C5.4 5.96 5.25 6.34 5.25 6.75V14.25C5.25 15.07 5.92 15.75 6.75 15.75H13.5C14.12 15.75 14.65 15.37 14.88 14.85L17.15 9.55C17.21 9.37 17.25 9.19 17.25 9V7.5Z"
-                />
-              </svg>
-            </div>
-            <span class="link-text">Liked videos</span>
-          </a>
-        </section>
-        <section class="links-item-container hide-on-mini">
-          <h3 class="section-title">Subscriptions</h3>
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <img
-                class="profile-img"
-                src="./assets/images/side-bar/profile-1.jpg"
-                alt="user profile image"
-              />
-            </div>
-            <span class="link-text">Ohfuh Cringe 69</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <img
-                class="profile-img"
-                src="./assets/images/side-bar/profile-2.jpg"
-                alt="user profile image"
-              />
-            </div>
-            <span class="link-text">Ohfuh Cringe 69</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <img
-                class="profile-img"
-                src="./assets/images/side-bar/profile-3.jpg"
-                alt="user profile image"
-              />
-            </div>
-            <span class="link-text">Ohfuh Cringe 69</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <img
-                class="profile-img"
-                src="./assets/images/side-bar/profile-4.jpg"
-                alt="user profile image"
-              />
-            </div>
-            <span class="link-text">Ohfuh Cringe 69</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM15 11H11V15H9V11H5V9H9V5H11V9H15V11Z"
-                />
-              </svg>
-            </div>
-            <span class="link-text">Browse channels</span>
-          </a>
-        </section>
-        <section class="links-item-container hide-on-mini">
-          <h3 class="section-title">more from youtube</h3>
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="15"
-                viewBox="0 0 20 15"
-                fill="currentColor"
-              >
-                <path
-                  d="M19.78 3.00001C19.78 3.00001 19.58 1.63001 18.98 1.03001C18.23 0.230006 17.38 0.230006 16.98 0.180006C14.2 -0.0199939 10 6.25208e-06 10 6.25208e-06C10 6.25208e-06 5.82 -0.0199939 3.03 0.180006C2.63 0.230006 1.79 0.230006 1.03 1.03001C0.43 1.63001 0.23 3.00001 0.23 3.00001C0.23 3.00001 0.03 4.63001 0 6.23001V7.93001C0.03 9.53001 0.23 11.13 0.23 11.13C0.23 11.13 0.43 12.53 1.03 13.13C1.79 13.93 2.78 13.89 3.23 13.98C4.8 14.13 9.83 14.16 10 14.16C10 14.16 14.2 14.16 17 13.96C17.38 13.92 18.23 13.92 19 13.12C19.6 12.52 19.8 11.14 19.8 11.14C19.8 11.14 20 9.54001 20 7.92001V6.22001C19.98 4.62001 19.78 3.00001 19.78 3.00001ZM7.98 10V4.16001L13.33 7.19001L7.97 10H7.98Z"
-                />
-              </svg>
-            </div>
-            <span class="link-text">Youtube Premium</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="14"
-                viewBox="0 0 20 14"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M20 8V3L15 0L10 3L5 0L0 3V8L10 14L20 8ZM7 6H5V8H4V6H2V5H4V3H5V5H7V6ZM13 8C12.45 8 12 7.55 12 7C12 6.45 12.45 6 13 6C13.55 6 14 6.45 14 7C14 7.55 13.55 8 13 8ZM16 6C15.45 6 15 5.55 15 5C15 4.45 15.45 4 16 4C16.55 4 17 4.45 17 5C17 5.55 16.55 6 16 6Z"
-                />
-              </svg>
-            </div>
-            <span class="link-text">Gaming</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="16"
-                viewBox="0 0 22 16"
-                fill="currentColor"
-              >
-                <path
-                  d="M15.94 2.91L14.53 4.36C15.43 5.3 15.99 6.58 15.99 8C15.99 9.42 15.43 10.71 14.53 11.64L15.94 13.09C17.21 11.78 17.99 9.98 17.99 8C17.99 6.02 17.21 4.21 15.94 2.91ZM18.77 0L17.36 1.45C18.98 3.13 20 5.44 20 8.01C20 10.58 18.99 12.89 17.36 14.55L18.76 16C20.77 13.96 22 11.13 22 8.01C22 4.88 20.77 2.05 18.77 0ZM6.06 2.91C4.79 4.21 4.01 6.01 4.01 8C4.01 9.99 4.79 11.79 6.06 13.09L7.47 11.64C6.57 10.7 6.01 9.42 6.01 8C6.01 6.58 6.57 5.29 7.47 4.36L6.06 2.91ZM4.64 1.45L3.24 0C1.23 2.04 0 4.87 0 7.99C0 11.12 1.23 13.95 3.23 16L4.64 14.55C3.02 12.87 2 10.56 2 7.99C2 5.42 3.01 3.11 4.64 1.45Z"
-                />
-                <path
-                  d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
-                />
-              </svg>
-            </div>
-            <span class="link-text">Live</span>
-          </a>
-        </section>
-        <section class="links-item-container hide-on-mini">
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  d="M17.43 10.98C17.47 10.66 17.5 10.34 17.5 10C17.5 9.66 17.47 9.34 17.43 9.02L19.53 7.37C19.73 7.22 19.78 6.95 19.66 6.73L17.66 3.27C17.54 3.05 17.26 2.97 17.06 3.05L14.56 4.05C14.04 3.65 13.48 3.32 12.86 3.07L12.49 0.42C12.43 0.18 12.22 0 11.99 0H7.99002C7.72002 0 7.51002 0.18 7.49002 0.42L7.09002 3.07C6.49002 3.32 5.92002 3.67 5.39002 4.05L2.91002 3.05C2.68002 2.95 2.41002 3.05 2.31002 3.27L0.310023 6.73C0.170023 6.95 0.230023 7.23 0.410023 7.37L2.53002 9.02C2.49002 9.34 2.46002 9.67 2.46002 10C2.46002 10.33 2.48002 10.66 2.52002 10.98L0.420023 12.63C0.220023 12.78 0.170023 13.05 0.290023 13.27L2.29002 16.73C2.41002 16.95 2.69002 17.03 2.89002 16.95L5.39002 15.95C5.91002 16.35 6.47002 16.68 7.09002 16.93L7.46002 19.58C7.50002 19.82 7.71002 20 7.96002 20H11.96C12.21 20 12.42 19.82 12.46 19.58L12.83 16.93C13.43 16.68 14 16.33 14.53 15.95L17.01 16.95C17.24 17.05 17.51 16.95 17.61 16.73L19.61 13.27C19.74 13.05 19.69 12.77 19.51 12.63L17.39 10.98H17.43ZM10 13.5C8.07002 13.5 6.50002 11.93 6.50002 10C6.50002 8.07 8.07002 6.5 10 6.5C11.93 6.5 13.5 8.07 13.5 10C13.5 11.93 11.93 13.5 10 13.5Z"
-                />
-              </svg>
-            </div>
-            <span class="link-text">Settings</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="17"
-                viewBox="0 0 15 17"
-                fill="currentColor"
-              >
-                <path d="M9.4 2L9 0H0V17H2V10H7.6L8 12H15V2H9.4Z" />
-              </svg>
-            </div>
-            <span class="link-text">Report history</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM11 17H9V15H11V17ZM13.07 9.25L12.17 10.17C11.45 10.9 11 11.5 11 13H9V12.5C9 11.4 9.45 10.4 10.17 9.67L11.41 8.41C11.78 8.05 12 7.55 12 7C12 5.9 11.1 5 10 5C8.9 5 8 5.9 8 7H6C6 4.79 7.79 3 10 3C12.21 3 14 4.79 14 7C14 7.88 13.64 8.68 13.07 9.25Z"
-                />
-              </svg>
-            </div>
-            <span class="link-text">Help</span>
-          </a>
-          <a href="#" class="nav-link-item btn rectangle-btn">
-            <div class="link-icon icon-container icon-24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M20 2H4C2.9 2 2.01 2.9 2.01 4L2 22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM13 14H11V12H13V14ZM13 10H11V6H13V10Z"
-                />
-              </svg>
-            </div>
-            <span class="link-text">Send feedback</span>
-          </a>
-        </section>
+              </div>
+              <span class="link-text">Ohfuh Cringe 69</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM15 11H11V15H9V11H5V9H9V5H11V9H15V11Z"
+                  />
+                </svg>
+              </div>
+              <span class="link-text">Browse channels</span>
+            </a>
+          </li>
+          <li class="links-item-container hide-on-mini">
+            <h3 class="section-title">more from youtube</h3>
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="15"
+                  viewBox="0 0 20 15"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M19.78 3.00001C19.78 3.00001 19.58 1.63001 18.98 1.03001C18.23 0.230006 17.38 0.230006 16.98 0.180006C14.2 -0.0199939 10 6.25208e-06 10 6.25208e-06C10 6.25208e-06 5.82 -0.0199939 3.03 0.180006C2.63 0.230006 1.79 0.230006 1.03 1.03001C0.43 1.63001 0.23 3.00001 0.23 3.00001C0.23 3.00001 0.03 4.63001 0 6.23001V7.93001C0.03 9.53001 0.23 11.13 0.23 11.13C0.23 11.13 0.43 12.53 1.03 13.13C1.79 13.93 2.78 13.89 3.23 13.98C4.8 14.13 9.83 14.16 10 14.16C10 14.16 14.2 14.16 17 13.96C17.38 13.92 18.23 13.92 19 13.12C19.6 12.52 19.8 11.14 19.8 11.14C19.8 11.14 20 9.54001 20 7.92001V6.22001C19.98 4.62001 19.78 3.00001 19.78 3.00001ZM7.98 10V4.16001L13.33 7.19001L7.97 10H7.98Z"
+                  />
+                </svg>
+              </div>
+              <span class="link-text">Youtube Premium</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="14"
+                  viewBox="0 0 20 14"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M20 8V3L15 0L10 3L5 0L0 3V8L10 14L20 8ZM7 6H5V8H4V6H2V5H4V3H5V5H7V6ZM13 8C12.45 8 12 7.55 12 7C12 6.45 12.45 6 13 6C13.55 6 14 6.45 14 7C14 7.55 13.55 8 13 8ZM16 6C15.45 6 15 5.55 15 5C15 4.45 15.45 4 16 4C16.55 4 17 4.45 17 5C17 5.55 16.55 6 16 6Z"
+                  />
+                </svg>
+              </div>
+              <span class="link-text">Gaming</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="16"
+                  viewBox="0 0 22 16"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M15.94 2.91L14.53 4.36C15.43 5.3 15.99 6.58 15.99 8C15.99 9.42 15.43 10.71 14.53 11.64L15.94 13.09C17.21 11.78 17.99 9.98 17.99 8C17.99 6.02 17.21 4.21 15.94 2.91ZM18.77 0L17.36 1.45C18.98 3.13 20 5.44 20 8.01C20 10.58 18.99 12.89 17.36 14.55L18.76 16C20.77 13.96 22 11.13 22 8.01C22 4.88 20.77 2.05 18.77 0ZM6.06 2.91C4.79 4.21 4.01 6.01 4.01 8C4.01 9.99 4.79 11.79 6.06 13.09L7.47 11.64C6.57 10.7 6.01 9.42 6.01 8C6.01 6.58 6.57 5.29 7.47 4.36L6.06 2.91ZM4.64 1.45L3.24 0C1.23 2.04 0 4.87 0 7.99C0 11.12 1.23 13.95 3.23 16L4.64 14.55C3.02 12.87 2 10.56 2 7.99C2 5.42 3.01 3.11 4.64 1.45Z"
+                  />
+                  <path
+                    d="M11 11C12.6569 11 14 9.65685 14 8C14 6.34315 12.6569 5 11 5C9.34315 5 8 6.34315 8 8C8 9.65685 9.34315 11 11 11Z"
+                  />
+                </svg>
+              </div>
+              <span class="link-text">Live</span>
+            </a>
+          </li>
+          <li class="links-item-container hide-on-mini">
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M17.43 10.98C17.47 10.66 17.5 10.34 17.5 10C17.5 9.66 17.47 9.34 17.43 9.02L19.53 7.37C19.73 7.22 19.78 6.95 19.66 6.73L17.66 3.27C17.54 3.05 17.26 2.97 17.06 3.05L14.56 4.05C14.04 3.65 13.48 3.32 12.86 3.07L12.49 0.42C12.43 0.18 12.22 0 11.99 0H7.99002C7.72002 0 7.51002 0.18 7.49002 0.42L7.09002 3.07C6.49002 3.32 5.92002 3.67 5.39002 4.05L2.91002 3.05C2.68002 2.95 2.41002 3.05 2.31002 3.27L0.310023 6.73C0.170023 6.95 0.230023 7.23 0.410023 7.37L2.53002 9.02C2.49002 9.34 2.46002 9.67 2.46002 10C2.46002 10.33 2.48002 10.66 2.52002 10.98L0.420023 12.63C0.220023 12.78 0.170023 13.05 0.290023 13.27L2.29002 16.73C2.41002 16.95 2.69002 17.03 2.89002 16.95L5.39002 15.95C5.91002 16.35 6.47002 16.68 7.09002 16.93L7.46002 19.58C7.50002 19.82 7.71002 20 7.96002 20H11.96C12.21 20 12.42 19.82 12.46 19.58L12.83 16.93C13.43 16.68 14 16.33 14.53 15.95L17.01 16.95C17.24 17.05 17.51 16.95 17.61 16.73L19.61 13.27C19.74 13.05 19.69 12.77 19.51 12.63L17.39 10.98H17.43ZM10 13.5C8.07002 13.5 6.50002 11.93 6.50002 10C6.50002 8.07 8.07002 6.5 10 6.5C11.93 6.5 13.5 8.07 13.5 10C13.5 11.93 11.93 13.5 10 13.5Z"
+                  />
+                </svg>
+              </div>
+              <span class="link-text">Settings</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="17"
+                  viewBox="0 0 15 17"
+                  fill="currentColor"
+                >
+                  <path d="M9.4 2L9 0H0V17H2V10H7.6L8 12H15V2H9.4Z" />
+                </svg>
+              </div>
+              <span class="link-text">Report history</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM11 17H9V15H11V17ZM13.07 9.25L12.17 10.17C11.45 10.9 11 11.5 11 13H9V12.5C9 11.4 9.45 10.4 10.17 9.67L11.41 8.41C11.78 8.05 12 7.55 12 7C12 5.9 11.1 5 10 5C8.9 5 8 5.9 8 7H6C6 4.79 7.79 3 10 3C12.21 3 14 4.79 14 7C14 7.88 13.64 8.68 13.07 9.25Z"
+                  />
+                </svg>
+              </div>
+              <span class="link-text">Help</span>
+            </a>
+            <a href="#" class="nav-link-item btn rectangle-btn">
+              <div class="link-icon icon-container icon-24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 2H4C2.9 2 2.01 2.9 2.01 4L2 22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM13 14H11V12H13V14ZM13 10H11V6H13V10Z"
+                  />
+                </svg>
+              </div>
+              <span class="link-text">Send feedback</span>
+            </a>
+          </li>
+        </ul>
       </nav>
       <footer class="side-bar-footer hide-on-mini">
         <p class="copyright">© 2020 Google LLC</p>
@@ -919,5 +937,4 @@
       </div>
     </main>
   </body>
-  <script type="module" src="./scripts/main.js"></script>
 </html>
