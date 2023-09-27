@@ -1,4 +1,4 @@
-// total width - left and right border width
+// thumb background width = total width - left and right border width
 // formula: width - border_width * 2
 $vertical-scroll-bg-clr: inset calc(16px - 4px * 2) 0 #909090;
 
