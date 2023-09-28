@@ -22,6 +22,17 @@
     margin-left: var(--mini-side-bar-width);
   }
 
+  @include tablet() {
+    margin-top: var(--mobile-header-height);
+    margin-left: unset;
+    padding-bottom: calc(var(--mobile-header-height) + 1.5rem);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile-large() {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .video-cell {
     display: flex;
     flex-direction: column;

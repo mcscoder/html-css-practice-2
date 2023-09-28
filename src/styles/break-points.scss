@@ -1,7 +1,7 @@
 $mobile-small: 320px;
 $mobile-medium: 480px;
 $mobile-large: 767px;
-$tablet: 1081px;
+$tablet: 1024px;
 $pc-small: 1312px;
 $pc-medium: 1575px;
 $pc-large: 1901px;
@@ -45,5 +45,11 @@ $pc-large: 1901px;
 @mixin pc-large {
   @media screen and (max-width: $pc-large) {
     @content;
+  }
+}
+
+.hide-on-mobile {
+  @include tablet() {
+    display: none !important;
   }
 }

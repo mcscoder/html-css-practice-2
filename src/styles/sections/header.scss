@@ -7,10 +7,18 @@
   background-color: #fff;
   z-index: 1;
 
+  @include tablet() {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  }
+
   .header-content-container {
     height: var(--header-height);
     display: flex;
     align-items: center;
+
+    @include tablet() {
+      height: var(--mobile-header-height);
+    }
 
     .left-header {
       display: flex;
@@ -28,6 +36,16 @@
         width: 100%;
         max-width: 640px;
         display: flex;
+
+        @include tablet() {
+          justify-content: end;
+          max-width: unset;
+
+          .search-btn {
+            background-color: transparent;
+            border: none;
+          }
+        }
 
         .search-inp {
           flex: 1;
