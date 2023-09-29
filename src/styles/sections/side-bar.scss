@@ -13,6 +13,7 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     width: unset;
     height: var(--mobile-side-bar-height);
+    overflow: hidden !important;
 
     .hide-on-mini {
       display: none !important;
