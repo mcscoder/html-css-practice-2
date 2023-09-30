@@ -27,10 +27,13 @@
     margin-left: unset;
     padding-bottom: calc(var(--mobile-header-height) + 1.5rem);
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
   }
 
   @include mobile-large() {
     grid-template-columns: repeat(1, 1fr);
+    padding-left: unset;
+    padding-right: unset;
   }
 
   .video-cell {
@@ -69,6 +72,10 @@
     .video-info {
       display: flex;
       gap: 14px;
+
+      @include mobile-large() {
+        padding: 0 0.75rem;
+      }
 
       .video-text-info {
         display: flex;
