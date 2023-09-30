@@ -7,57 +7,101 @@
   background-color: #fff;
   z-index: 2;
 
+  @include tablet() {
+    top: unset;
+    right: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: unset;
+    height: var(--mobile-side-bar-height);
+    overflow: hidden !important;
+
+    .hide-on-mini {
+      display: none !important;
+    }
+  }
+
   .side-bar-nav {
     padding: 0 0.75rem;
 
-    .links-item-container {
+    @include tablet() {
+      padding: unset;
+    }
+
+    .link-container {
       display: flex;
       flex-direction: column;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid #e5e5e5;
 
-      .section-title {
-        color: var(--yt-gray);
-        font-size: 14px;
-        font-weight: 500;
-        margin: 4px 0 14px 8px;
-        text-transform: uppercase;
+      @include tablet() {
+        flex-direction: row;
       }
 
-      .nav-link-item {
+      .links-item-container {
         display: flex;
-        align-items: center;
-        gap: 6px 1.5rem;
-        transition-property: background;
+        flex-direction: column;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #e5e5e5;
 
-        .link-icon {
+        @include tablet() {
+          flex-direction: row;
+          padding: 0;
+          border: none;
+        }
+
+        .section-title {
           color: var(--yt-gray);
-        }
-
-        .link-text {
-          color: var(--yt-main-text-clr);
           font-size: 14px;
-          font-weight: 400;
+          font-weight: 500;
+          margin: 4px 0 14px 8px;
+          text-transform: uppercase;
         }
 
-        &.active {
-          background-color: var(--black-005);
+        .nav-link-item {
+          display: flex;
+          align-items: center;
+          gap: 6px 24px;
+          transition-property: background;
+
+          @include tablet() {
+            flex-direction: column;
+            width: 25vw;
+            gap: 2px;
+            padding: 4px 0;
+            background-color: transparent !important;
+          }
 
           .link-icon {
-            color: var(--yt-red);
+            color: var(--yt-gray);
           }
 
           .link-text {
-            font-weight: 500;
+            color: var(--yt-main-text-clr);
+            font-size: 14px;
+            font-weight: 400;
+
+            @include tablet() {
+              font-size: 10px;
+            }
+          }
+
+          &.active {
+            background-color: var(--black-005);
+
+            .link-icon {
+              color: var(--yt-red);
+            }
+
+            .link-text {
+              font-weight: 500;
+            }
+
+            &:hover {
+              background-color: var(--black-01);
+            }
           }
 
           &:hover {
-            background-color: var(--black-01);
+            background-color: var(--black-005);
           }
-        }
-
-        &:hover {
-          background-color: var(--black-005);
         }
       }
     }
